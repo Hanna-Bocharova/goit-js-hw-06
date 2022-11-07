@@ -22,3 +22,9 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+.list {
+  display: inline-block;
+  list-style: none;
+  margin: 20px;
+
+}
