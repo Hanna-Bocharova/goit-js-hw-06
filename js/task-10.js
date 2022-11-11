@@ -1,5 +1,5 @@
 const refs = {
-  inputEl: document.querySelector("#controls"),
+  inputEl: document.querySelector("input"),
   btnCreate: document.querySelector("[data-create]"),
   btnDestroy: document.querySelector("[data-destroy]"),
   boxesEl: document.querySelector("#boxes"),
@@ -10,6 +10,7 @@ function getRandomHexColor() {
 };
 
 function createBoxes(amount) {
+  const amount = inputEl.valueAsNumber;
   const basicSize = 30;
   for (let i = 1; i <= amount; i += 1)  {
     const boxlist = document.createElement("div");
@@ -18,7 +19,7 @@ function createBoxes(amount) {
     boxlist.style.cssText = `Width: ${size}px; height:${size}px; backgroundColor: ${getRandomHexColor()} `;
     refs.boxesEl.appendChild(boxlist);
   }
-  
+  console.log(amount);
 };
 
 function destroyBoxes(event) {
